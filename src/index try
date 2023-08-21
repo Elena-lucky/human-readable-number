@@ -1,0 +1,82 @@
+let words = [ "", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+    "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
+    "seventeen", "eighteen", "nineteen" ];
+
+  let tyWords = [ "", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" ];
+
+  if (number === 0) {
+    return "zero";
+  } else if (number < 20) {
+    return words[number];
+  } else if (number < 100) {
+    return tyWords[Math.floor(number / 10)] + (number % 10 !== 0 ? " " + words[number % 10] : "");
+  } else {
+    return words[Math.floor(number / 100)] + " hundred" + (number % 100 !== 0 ? " " + toReadable(number % 100) : "");
+}
+
+/*
+
+    let num = number.toString();
+    let result;
+    if ( num.length = 1 ) {
+       switch (num) {
+         case 0:
+            result = 'zero';
+          case 1:
+            result = 'one';
+          case 2:
+            result = 'two';
+          case 3:
+            result = 'three';
+          case 4:
+            result = 'four';
+          case 5:
+            result = 'five';
+          case 6:
+            result = 'six'; 
+          case 7:
+            result = 'seven';
+          case 8:
+            result = 'eight';
+          case 9:
+            result = 'nine';
+        }  
+    } else if ( num.length = 2 ) {
+         switch (num) {  
+            case 10:
+            result = 'ten';
+          case 11:
+            result = 'eleven';
+          case 12:
+            result = 'twelve';
+          case 13:
+            result = 'thirteen';
+          case 14:
+            result = 'fourteen';
+          case 15:
+            result = 'fiveteen';
+          case 16:
+            result = 'sixteen';
+          case 17:
+            result = 'seventeen';
+          case 18:
+            result = 'eighteen';
+          case 19:
+            result = 'nineteen';
+          case 20:
+            result = 'twenty';
+        }
+    }; 
+    
+    let numSecondary = ["twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety"].map(item => item.length);
+    console.log(lengths);
+
+    join()
+Метод join() объединяет все элементы массива в одну строку, используя определенный разделитель, который передается через параметр:
+
+const people = ["Tom", "Sam", "Bob"];
+ 
+const peopleToString = people.join("; ");
+console.log(peopleToString);         // Tom; Sam; Bob
+
+    return result;
